@@ -19,10 +19,14 @@
 					</div>
 				</div>
 
-				<div class="four wide column">
-					<p id="hitokotoText" class="m-text-thin m-text-spaced ">{{ hitokoto.hitokoto }}</p>
-					<p id="hitokotoFrom" class="m-text-thin m-text-spaced " style="float: right" v-text="hitokoto.from?`——《${hitokoto.from}》`:''"></p>
-				</div>
+        <div class="four wide column">
+          <div class="ui link list">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">我的相册</h4>
+            <div class="item">
+              <img src="/img/qr-image.png" class="ui rounded image" alt="" style="width: 100px">
+            </div>
+          </div>
+        </div>
 			</div>
 
 			<div class="ui inverted section divider"></div>
