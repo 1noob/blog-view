@@ -3,7 +3,7 @@
 		<div class="ui top attached segment" style="text-align: center">
 			<h2 class="m-text-500">我的动态</h2>
 		</div>
-		<div class="ui attached segment m-padding-bottom-large">
+		<div class="ui attached olive segment m-padding-bottom-large">
 			<div class="moments">
 				<div class="moment" v-for="(moment,index) in momentList" :key="index">
 					<div class="avatar">
