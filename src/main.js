@@ -11,7 +11,7 @@ import "./assets/css/typo.css";
 //semantic-ui
 import 'semantic-ui-css/semantic.min.css'
 //element-ui
-import Element from 'element-ui'
+import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 //moment
 import './util/dateTimeFormatUtils.js'
@@ -28,7 +28,7 @@ console.log(
 	'background:transparent'
 )
 
-Vue.use(Element)
+Vue.use(ElementUI)
 Vue.use(Viewer)
 
 Vue.prototype.msgSuccess = function (msg) {

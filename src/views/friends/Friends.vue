@@ -1,31 +1,21 @@
 <template>
 	<div>
-		<div class="ui top attached segment" style="text-align: center">
-			<h2 class="m-text-500">小伙伴们</h2>
-		</div>
-		<div class="ui attached segment olive">
-			<div class="ui link three doubling cards">
-				<a :href="item.website" target="_blank" rel="external nofollow noopener" class="card" :style="randomRGB()"
-				   v-for="(item,index) in friendList" :key="index" @click="addViews(item.nickname)">
-					<div class="image">
-						<img :src="item.avatar" onerror="this.src = '/img/error.png'">
-					</div>
-					<div class="content">
-						<div class="header">{{ item.nickname }}</div>
-						<div class="description">{{ item.description }}</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!--页面描述-->
-		<div class="ui olive attached segment">
-			<div class="typo content" v-viewer v-html="info.content"></div>
-		</div>
-		<!--评论-->
-		<div class="ui bottom olive attached segment threaded comments">
-			<CommentList :page="2" :blogId="null" v-if="info.commentEnabled"/>
-			<h3 class="ui header" v-else>评论已关闭</h3>
-		</div>
+    <div class="ui top attached segment">
+      <div class="ui link three doubling cards">
+        <a :href="item.website" target="_blank" rel="external nofollow noopener" class="card" :style="randomRGB()"
+           v-for="(item,index) in friendList" :key="index" @click="addViews(item.nickname)">
+          <div class="image">
+            <img :src="item.avatar" onerror="this.src = '/img/error.png'">
+          </div>
+          <div class="content">
+            <div class="header">{{ item.nickname }}</div>
+            <div class="description">{{ item.description }}</div>
+          </div>
+        </a>
+      </div>
+      <br/>
+      <div class="typo content" v-viewer v-html="info.content"></div>
+    </div>
 	</div>
 </template>
 
@@ -47,7 +37,8 @@
 				info: {
 					content: '',
 					commentEnabled: false
-				}
+				},
+        loading: true
 			}
 		},
 		created() {
@@ -80,11 +71,12 @@
 <style scoped>
 	.card .image {
 		width: 70px !important;
-		margin: 10px auto 0px;
+		margin: 10px auto 0;
 		background: unset !important;
 	}
 
 	.card .image img {
+		border-radius: 0;
 		width: 70px !important;
 		height: 70px !important;
 	}
