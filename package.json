@@ -29,7 +29,7 @@
     "vue-template-compiler": "2.6.11"
   },
   "engines": {
-    "node": "18.18"
+    "node": "16.20"
   },
   "browserslist": [
     "> 1%",
