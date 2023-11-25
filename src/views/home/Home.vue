@@ -22,8 +22,8 @@
 		beforeRouteEnter(to, from, next) {
 			next(vm => {
 				if (from.name !== 'blog') {
-					//其它页面跳转到首页时，重新请求数据
-					//设置一个flag，让首页的分页组件指向正确的页码
+					// 其它页面跳转到首页时，重新请求数据
+					// 设置一个flag，让首页的分页组件指向正确的页码
 					vm.$store.commit(SET_IS_BLOG_TO_HOME, false)
 					vm.getBlogList()
 				} else {

@@ -38,7 +38,6 @@
 					content: '',
 					commentEnabled: false
 				},
-        loading: true
 			}
 		},
 		created() {
