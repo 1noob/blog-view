@@ -55,6 +55,7 @@
 	import Nav from "@/components/index/Nav";
 	import Header from "@/components/index/Header";
 	import Footer from "@/components/index/Footer";
+  import {getSite} from '@/api';
 	import Introduction from "@/components/sidebar/Introduction";
 	import Tags from "@/components/sidebar/Tags";
 	import RandomBlog from "@/components/sidebar/RandomBlog";
