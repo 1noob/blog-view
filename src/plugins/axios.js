@@ -3,7 +3,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 const request = axios.create({
-	baseURL: 'https://vue.jackey.love/api/',
+	baseURL: 'https://vue.singsong.blog/api/',
 	timeout: 10000,
 })
 
